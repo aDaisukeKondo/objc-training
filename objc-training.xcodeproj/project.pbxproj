@@ -51,6 +51,7 @@
 		9911D922204A57B90006D45B /* objc-trainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "objc-trainingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9911D926204A57B90006D45B /* objc_trainingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_trainingUITests.m; sourceTree = "<group>"; };
 		9911D928204A57B90006D45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9985162B204A885800D71473 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				9911D902204A57B90006D45B /* main.m */,
+				9985162B204A885800D71473 /* main.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -507,6 +509,7 @@
 				9911D92D204A57B90006D45B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9911D92E204A57B90006D45B /* Build configuration list for PBXNativeTarget "objc-trainingTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +518,7 @@
 				9911D930204A57B90006D45B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9911D931204A57B90006D45B /* Build configuration list for PBXNativeTarget "objc-trainingUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +527,7 @@
 				9911D933204A57B90006D45B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
