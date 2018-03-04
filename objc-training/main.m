@@ -73,44 +73,58 @@ void trainingProc() {
 }
 
 @implementation Student
+//{
+//    NSString *name;
+//    NSInteger score;
+//    Subject favorite;
+//}
 
-- (id)initWithName:(NSString *)name
+@synthesize name;
+@synthesize score;
+@synthesize favorite;
+//@synthesize favorite = good;
+
+- (id)initWithName:(NSString *)str
 {
     self = [super init];
 
-    self.name = name;
-    self.score = 50;
-    self.favorite = Mathmatics;
+    name = str;
+    score = 50;
+    favorite = Mathmatics;
     return self;
 }
 
 - (id)study
 {
-    self.score += 10;
-    if (self.score > 100) {
-        self.score = 100;
+    score += 10;
+    if (score > 100) {
+        score = 100;
     }
     return self;
 }
 
 - (NSString *)description {
-    return self.name;
+    return name;
 }
 
 @end
 
 int main(int argc, char * argv[]) {
-    trainingProc();
+//    trainingProc();
 
-    id hogeo = [[Student alloc] initWithName:@"ほげ夫"];
-    NSLog(@"%@: score=%ld", [hogeo name], (long)[hogeo score]);
+    Student *hogeo = [[Student alloc] initWithName:@"ほげ夫"];
+    NSLog(@"%@: %d score=%d", [hogeo name], [hogeo favorite], [hogeo score]);
   
-    [hogeo study];
-    NSLog(@"%@: score=%ld", [hogeo name], (long)[hogeo score]);
+    [hogeo setName:@"ふー美"]; // auto created setter
 
     [[[hogeo study]study]study];
-    NSLog(@"%@: score=%ld", [hogeo name], (long)[hogeo score]);
-
+    NSLog(@"%@: %d score=%d", [hogeo name], [hogeo favorite], [hogeo score]);
+    NSLog(@"name: %@", hogeo); // description called
+    
+    // dot operator for accessor
+    hogeo.name = @"ばー助";
+    NSLog(@"%@: %d score=%d", hogeo.name, hogeo.favorite, hogeo.score);
+    
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

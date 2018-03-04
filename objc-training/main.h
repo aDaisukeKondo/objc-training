@@ -20,10 +20,9 @@ typedef NS_ENUM(NSInteger, Subject) {
 };
 
 @interface Student : NSObject
-
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic) NSInteger score;
-@property (nonatomic) NSInteger favorite;
+@property(nonatomic)NSString *name;
+@property(readonly, nonatomic) NSInteger score;
+@property(nonatomic) Subject favorite;
 
 - (id)initWithName: (NSString*)name;
 - (id)study;
